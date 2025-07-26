@@ -1,17 +1,23 @@
-// build.gradle.kts
 version = 1
 
-plugins {
-    id("cloudstream.plugin") version "1.0.0"
+cloudstream {
+    // Descrizione del provider
+    description = "Movies and Shows from DinoStreaming"
+    authors = listOf("doGior")
+
+    /**
+     * Status:
+     * 0: Down | 1: Ok | 2: Slow | 3: Beta only
+     */
+    status = 1
+
+    tvTypes = listOf("Movie", "TvSeries")
+    requiresResources = false
+    language = "it"
+
+    iconUrl = "https://dinostreaming.it/favicon.ico"
 }
 
-cloudstream {
-    language.set("it")
-    apiVersion.set(4)
-    pluginClass.set("com.dinostreaming.DinoStreaming")
-    description.set("Movies and Shows from DinoStreaming")
-    authors.set(listOf("doGior"))
-    tvTypes.set(listOf("Movie", "TvSeries"))
-    status.set(1)
-    iconUrl.set("https://dinostreaming.it/favicon.ico")
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
 }
