@@ -1,19 +1,18 @@
+plugins {
+    id("com.lagradost.cloudstream3.gradle")
+    kotlin("android")
+}
+
+version = 1
 
 cloudstream {
-    // Descrizione del provider
+    language = "it"
+    apiVersion = 4
     description = "Movies and Shows from DinoStreaming"
     authors = listOf("doGior")
-
-    /**
-     * Status:
-     * 0: Down | 1: Ok | 2: Slow | 3: Beta only
-     */
     status = 1
-
     tvTypes = listOf("Movie", "TvSeries")
     requiresResources = false
-    language = "it"
-    
     iconUrl = "https://dinostreaming.it/favicon.ico"
 }
 
