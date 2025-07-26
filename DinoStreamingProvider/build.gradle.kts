@@ -7,6 +7,6 @@ cloudstream {
     description = "Movies and Shows from DinoStreaming"
     authors = listOf("doGior")
     tvTypes = listOf("Movie", "TvSeries")
-    name = "DinoStreaming"
+    displayName = "DinoStreaming"
     iconUrl = "https://dinostreaming.it/favicon.ico"
 }
