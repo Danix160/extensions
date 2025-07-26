@@ -4,6 +4,7 @@ cloudstream {
     // Descrizione del provider
     description = "Movies and Shows from DinoStreaming"
     authors = listOf("doGior")
+    apiVersion = 4
 
     /**
      * Status:
