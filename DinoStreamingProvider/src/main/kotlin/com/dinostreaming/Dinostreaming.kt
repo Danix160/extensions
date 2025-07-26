@@ -1,8 +1,10 @@
 package com.dinostreaming
 
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.annotations.CloudstreamPlugin 
 import com.lagradost.cloudstream3.utils.*
 
+@CloudstreamPlugin
 class DinoStreaming : MainAPI() {
     override var mainUrl = "https://www.dinostreaming.it"
     override var name = "DinoStreaming"
