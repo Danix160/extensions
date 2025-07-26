@@ -1,4 +1,9 @@
+// build.gradle.kts
 version = 1
+
+plugins {
+    id("cloudstream.plugin") version "1.0.0"
+}
 
 cloudstream {
     language.set("it")
