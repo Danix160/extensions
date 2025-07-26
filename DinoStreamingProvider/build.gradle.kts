@@ -14,6 +14,7 @@ cloudstream {
     tvTypes = listOf("Movie", "TvSeries")
     requiresResources = false
     language = "it"
+    apiVersion = 4
 
     iconUrl = "https://dinostreaming.it/favicon.ico"
 }
