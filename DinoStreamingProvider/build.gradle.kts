@@ -1,6 +1,6 @@
 
 cloudstream {
-    apiVersion = 4
+apiVersion = 4
     // Descrizione del provider
     description = "Movies and Shows from DinoStreaming"
     authors = listOf("doGior")
@@ -15,7 +15,6 @@ cloudstream {
     requiresResources = false
     language = "it"
     
-
     iconUrl = "https://dinostreaming.it/favicon.ico"
 }
 
