@@ -72,19 +72,17 @@ class DinoStreaming : MainAPI() {
         }
     }
 
-    override suspend fun loadLinks(
-        data: String,
-        isCasting: Boolean,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (ExtractorLink) -> Unit
-    ) {
-        val doc = app.get(data).document
-        val iframeList = doc.select("iframe")
-        for (iframe in iframeList) {
-            val src = iframe.attr("src")
-            if (src.isNotBlank()) {
-                loadExtractor(src, data, subtitleCallback, callback)
-            }
-        }
-    }
+ override suspend fun loadLinks(
+    data: String,
+    isCasting: Boolean,
+    subtitleCallback: (SubtitleFile) -> Unit,
+    callback: (ExtractorLink) -> Unit
+): Boolean {
+    val doc = app.get(data).document
+    val iframe = doc.select("iframe").firstOrNull()?.attr("src") ?: return false
+
+    loadExtractor(iframe, data, subtitleCallback, callback)
+    return true
+}
+
 }
