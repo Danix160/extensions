@@ -3,11 +3,11 @@ plugins {
     kotlin("android")
 }
 
-version = 1
+version = 1 // ✅ questa è fuori dal blocco cloudstream
 
 cloudstream {
     language = "it"
-    apiVersion = 4
+    apiVersion = 4 // ✅ solo una volta, dentro cloudstream
     description = "Movies and Shows from DinoStreaming"
     authors = listOf("doGior")
     status = 1
