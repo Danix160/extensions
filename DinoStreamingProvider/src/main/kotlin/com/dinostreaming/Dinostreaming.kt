@@ -1,6 +1,7 @@
 package com.dinostreaming
 
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.annotations.CloudstreamPlugin 
 import com.lagradost.cloudstream3.utils.*
 
