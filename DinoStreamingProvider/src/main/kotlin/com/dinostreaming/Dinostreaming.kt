@@ -7,12 +7,12 @@ class DinoStreaming : MainAPI() {
     override var mainUrl = "https://www.dinostreaming.it"
     override var name = "DinoStreaming"
     override val hasMainPage = true
-    override val lang = "it"
+    override var lang = "it" // ✅ OK
 
-    override val mainPage = listOf(
-        "Film" to "$mainUrl/film-streaming/",
-        "Serie TV" to "$mainUrl/serie-tv-streaming/"
-    )
+   override val mainPage = listOf(
+    MainPageData("Film", "$mainUrl/film-streaming/"),
+    MainPageData("Serie TV", "$mainUrl/serie-tv-streaming/")
+)
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         val doc = app.get(request.data).document
